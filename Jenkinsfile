@@ -38,7 +38,7 @@ pipeline {
             stage('Kubernetes deploy') {
                 agent {label 'KOPS'}
                 steps {
-                    sh "helm upgrade --install --force web-app-stack helm/web-app-charts --set appimage=${registry}:V${BUILD_NUMBER} content='Hello world' --namespace dev"
+                    sh "helm upgrade --install --force web-app-stack helm/web-app-charts --set appimage=${registry}:V${BUILD_NUMBER} content=\"Hello world\" --namespace dev"
                 }
             }
         }
