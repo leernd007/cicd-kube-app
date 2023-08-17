@@ -19,5 +19,3 @@ spec:
           image: {{ .Values.appimage }}
           ports:
             - containerPort: 80
-          command: ["/bin/echo"]
-          args: ["{{ .Values.content }}" ">" "/usr/share/nginx/html/index.html"]
